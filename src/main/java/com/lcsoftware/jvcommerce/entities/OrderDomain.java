@@ -20,7 +20,10 @@ public class OrderDomain {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
+
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant moment;
+
     private OrderStatus orderStatus;
 
     @ManyToOne

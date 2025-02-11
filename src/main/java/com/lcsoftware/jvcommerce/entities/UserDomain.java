@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name= "tb_user")
@@ -29,4 +31,7 @@ public class UserDomain {
     private LocalDate birthDate;
 
     private String password;
+
+    @OneToMany(mappedBy = "client")
+    private List<OrderDomain> orders = new ArrayList<>();
 }

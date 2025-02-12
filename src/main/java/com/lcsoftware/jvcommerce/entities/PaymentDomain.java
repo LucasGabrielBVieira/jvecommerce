@@ -14,7 +14,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Payment {
+public class PaymentDomain {
 
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)

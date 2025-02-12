@@ -29,4 +29,7 @@ public class OrderDomain {
     @ManyToOne
     @JoinColumn(name="client_id")
     private UserDomain client;
+
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private PaymentDomain payment;
 }
